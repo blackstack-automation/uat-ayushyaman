@@ -127,19 +127,17 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.55, ease: "easeOut" }}
               className="mt-10 border-t border-[#55617124] pt-5"
             >
-              <ul className="flex flex-wrap items-center gap-2 text-navy">
-                <li className="inline-flex items-center gap-1.5 font-medium">
-                  Google Rating <span className="text-[#FFA800]">5.0</span>
-                </li>
-                <li className="inline-flex items-center gap-1">
+              <div className="flex flex-wrap items-center gap-3 text-navy">
+                <span className="inline-flex items-center gap-2 font-bold text-navy">5 star care</span>
+
+                <div className="inline-flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star key={i} className="size-3.5 fill-[#FFA800] text-[#FFA800]" />
                   ))}
-                </li>
-                <li className="inline-flex items-center font-medium">
-                  based on 500 reviews
-                </li>
-              </ul>
+                </div>
+
+                <span className="inline-flex items-center text-sm text-[#556171]">from your first call to full recovery.</span>
+              </div>
             </motion.div>
           </div>
 

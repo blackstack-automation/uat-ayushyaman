@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Check, ArrowRight, ShieldCheck, HeartHandshake, PhoneCall, Wallet } from "lucide-react";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Footer } from "@/components/layout/footer";
@@ -46,8 +47,21 @@ export function AboutUsPageSection() {
               <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-slate-200 relative shadow-xl">
                 <div className="absolute inset-0 bg-gradient-to-tr from-navy/40 to-transparent z-10" />
                 <div className="absolute inset-0 flex items-center justify-center text-slate-400">
-                   {/* In a real app we'd use next/image here */}
-                   [Doctor wearing mask image]
+                   {/* Clickable image — opens the local asset in a new tab */}
+                  <a
+                    href="/assets/doctor-wearing-mask.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative block w-full h-full"
+                  >
+                    <Image
+                      src="/assets/doctor-wearing-mask.png"
+                      alt="Doctor wearing mask"
+                          width={500}
+                        height={500}
+                      className="object-cover"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -114,11 +128,23 @@ export function AboutUsPageSection() {
 
             <div className="w-full lg:w-1/2">
               {/* Image Placeholder */}
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-slate-200 relative shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-tr from-navy/40 to-transparent z-10" />
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden relative">
                 <div className="absolute inset-0 flex items-center justify-center text-slate-400">
                    {/* In a real app we'd use next/image here */}
-                   [Surgeons operating image]
+                                     <a
+                    href="/assets/surgeon-operating-image.avif"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative block w-full h-full"
+                  >
+                    <Image
+                      src="/assets/surgeon-operating-image.avif"
+                      alt="Surgeon operating"
+                          width={922}
+                        height={691}
+                      className="object-cover"
+                    />
+                  </a>
                 </div>
               </div>
             </div>

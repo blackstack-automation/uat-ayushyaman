@@ -69,10 +69,6 @@ export function PressReleasePageSection() {
               {pressReleases.map((pr, i) => (
                 <div key={i} className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm flex flex-col sm:flex-row group hover:shadow-md transition-shadow">
                   {/* Thumbnail Placeholder */}
-                  <div className="w-full sm:w-64 h-48 sm:h-auto bg-slate-200 shrink-0 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-navy/20 to-transparent" />
-                  </div>
-                  
                   <div className="p-6 flex flex-col justify-center">
                     <div className="flex items-center gap-4 mb-3">
                       <span className={`px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider ${pr.badgeColor}`}>

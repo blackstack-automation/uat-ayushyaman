@@ -480,7 +480,7 @@ export default function LaunchPage() {
                 transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
               />
               <Sparkles className="size-4" />
-              Unveil the site
+              Launch the site
             </motion.button>
 
             <motion.p
