@@ -5,6 +5,7 @@ import { ArrowLeft, Calendar, Clock, Share2, Check } from "lucide-react";
 import Link from "next/link";
 import { SiteHeader } from "@/components/layout/site-header";
 import { Footer } from "@/components/layout/footer";
+import { blogPosts } from "@/lib/blog";
 
 export function BlogDetailsPageSection({ slug }: { slug: string }) {
   // Format slug to title
@@ -12,6 +13,9 @@ export function BlogDetailsPageSection({ slug }: { slug: string }) {
     .split("-")
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
+
+  // Find post metadata by slug so we can render its image if present
+  const post = blogPosts.find((p) => p.slug === slug);
 
   return (
     <div className="w-full bg-white font-sans text-navy min-h-screen flex flex-col">
@@ -52,8 +56,17 @@ export function BlogDetailsPageSection({ slug }: { slug: string }) {
         <div className="site-px mx-auto max-w-3xl">
           {/* Hero Image */}
           <div className="w-full aspect-video bg-slate-200 rounded-3xl mb-12 overflow-hidden relative shadow-lg">
-             {/* Placeholder for actual image */}
-             <div className="absolute inset-0 bg-gradient-to-tr from-navy/10 to-transparent" />
+            {post?.image ? (
+              <img
+                src={post.image}
+                alt={post.title || title}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="absolute inset-0 bg-slate-200" />
+            )}
+
+            <div className="absolute inset-0 bg-gradient-to-tr from-navy/10 to-transparent" />
           </div>
 
           <div className="prose prose-slate prose-lg max-w-none">

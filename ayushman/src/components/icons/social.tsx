@@ -32,17 +32,18 @@ export function YoutubeIcon(props: IconProps) {
   );
 }
 
-export function XIcon(props: IconProps) {
+export function linkedinIcon(props: IconProps) {
   return (
     <svg {...base} {...props}>
-      <path d="M17.53 3h3.2l-7 8 8.23 10h-6.44l-5.05-6.15L4.7 21H1.5l7.49-8.56L1.1 3h6.6l4.56 5.62L17.53 3Zm-1.12 16.1h1.77L7.68 4.8H5.78l10.63 14.3Z" />
+      <path d="M19 0H5C3.346 0 2 1.346 2 3v18c0 1.654 1.346 3 3 3h14c1.654 0 3-1.346 3-3V3c0-1.654-1.346-3-3-3zM8.5 18H6V9h2.5v9zM7.25 7.75a1.44 1.44 0 110-2.88 1.44 1.44 0 010 2.88zM20 18h-2.5v-4.5c0-1.07-.02-2.44-1.5-2.44-1.5 0-1.73 1.17-1.73 2.37V18H12V9h2.39v1.23h.03c.33-.62 1.14-1.27 2.34-1.27 2.5 0 2.97 1.64 2.97 3.77V18z" />
     </svg>
   );
 }
+
 
 export const socialIcons = {
   instagram: InstagramIcon,
   facebook: FacebookIcon,
   youtube: YoutubeIcon,
-  x: XIcon,
+  linkedin: linkedinIcon,
 } as const;

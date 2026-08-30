@@ -78,11 +78,21 @@ export function BlogsPageSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pagedPosts.map((post, i) => (
               <Link href={`/our-company/blogs/${post.slug}`} key={i} className="group flex flex-col h-full bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all overflow-hidden">
-                <div className={`h-56 w-full ${post.imageColor} relative overflow-hidden`}>
+                <div className="h-56 w-full relative overflow-hidden">
                   <div className="absolute top-4 left-4 z-10 bg-brand text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                     {post.category}
                   </div>
-                  {/* Placeholder for real images */}
+
+                  {post.image ? (
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className={`h-full w-full ${post.imageColor}`} />
+                  )}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent mix-blend-overlay group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 

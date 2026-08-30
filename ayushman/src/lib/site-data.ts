@@ -361,8 +361,8 @@ export const siteContact = {
 export const telHref = (phone: string) => `tel:${phone.replace(/[^\d+]/g, "")}`;
 
 export const socialLinks = [
-  { label: "Instagram", href: "#", icon: "instagram" },
-  { label: "Facebook", href: "#", icon: "facebook" },
-  { label: "YouTube", href: "#", icon: "youtube" },
-  { label: "X", href: "#", icon: "x" },
+  { label: "Instagram", href: "https://www.instagram.com/ayushman_surgicare", icon: "instagram" },
+  { label: "Facebook", href: "https://www.facebook.com/ayushman_surgicare", icon: "facebook" },
+  { label: "YouTube", href: "https://www.youtube.com/@ayushman_surgicare", icon: "youtube" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/ayushman-surgicare/", icon: "linkedin" },
 ] as const;
