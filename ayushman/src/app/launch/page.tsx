@@ -369,7 +369,7 @@ export default function LaunchPage() {
   const still = Boolean(reduce);
 
   return (
-    <div className="fixed inset-0 z-[1000] select-none overflow-hidden bg-[#075453] font-sans">
+    <div className="fixed inset-0 z-[1000] select-none overflow-hidden bg-[#0e7f78] font-sans">
       {/* ===== STAGE — the "camera" that pushes through the opening ===== */}
       <motion.div
         className="absolute inset-0"

@@ -136,7 +136,7 @@ export function Hero() {
                   ))}
                 </div>
 
-                <span className="inline-flex items-center text-sm text-[#556171]">from your first call to full recovery.</span>
+                <span className="inline-flex items-center gap-2 font-bold text-navy">from your first call to full recovery.</span>
               </div>
             </motion.div>
           </div>
