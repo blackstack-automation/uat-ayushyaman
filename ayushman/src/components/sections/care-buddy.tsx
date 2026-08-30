@@ -171,7 +171,7 @@ export function CareBuddy() {
                   transition={{ duration: 0.4, delay: 0.2 }}
                   className="shrink-0"
                 >
-                  <Link href="#talk-to-care-buddy">
+                  <Link href="contact" className="inline-block">
                     <button className="flex items-center gap-2.5 rounded-xl bg-brand px-6 py-3.5 text-xs sm:text-sm font-bold text-white shadow-md hover:bg-[#0b7c72] active:scale-[0.98] transition-all duration-200">
                       <MessageCircle className="size-4" />
                       <span>TALK TO A CARE BUDDY</span>
