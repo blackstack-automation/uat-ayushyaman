@@ -5,8 +5,10 @@ export type BlogPost = {
   readTime: string;
   title: string;
   desc: string;
-  /** Tailwind bg-* class used as an image placeholder. */
-  image: string;
+  /** Tailwind bg-* class used as an image placeholder (e.g. "bg-amber-100"). */
+  image?: string;
+  /** Tailwind bg-* class used as a color-only placeholder when no image is provided. */
+  imageColor?: string;
   /** Specialty slugs this post is relevant to (for "related reading"). */
   specialties?: string[];
 };
